@@ -112,7 +112,7 @@ if (document.getElementById('dishes')) {
 // 首页按钮交互（所有页面都可用）
 window.onload = function() {
     document.querySelector('.primary-btn')?.addEventListener('click', function() {
-        window.location.href = 'books.html';
+        window.location.href = 'books';
     });
     document.querySelector('.secondary-btn')?.addEventListener('click', function() {
         alert('素教学习致力于用AI赋能素质教育，敬请期待更多功能！');
