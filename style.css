@@ -26,6 +26,20 @@ body {
     color: #fff;
     letter-spacing: 2px;
 }
+.nav-links {
+    margin-left: auto;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+}
 
 .main-content {
     max-width: 900px;
@@ -78,6 +92,14 @@ body {
 }
 .secondary-btn:hover {
     background: #e0e3ff;
+}
+.explore-btn {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ffa726 100%);
+    color: #fff;
+    font-weight: bold;
+}
+.explore-btn:hover {
+    opacity: 0.92;
 }
 .features {
     display: flex;
@@ -152,4 +174,182 @@ body {
     color: #666;
     font-size: 0.98rem;
     margin: 0;
+}
+
+/* 家具商店页面样式 */
+.store-intro {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(91,108,255,0.10);
+    padding: 40px 32px;
+    margin-bottom: 36px;
+}
+.store-intro h1 {
+    text-align: center;
+    color: #5b6cff;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+.intro-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.intro-text {
+    flex: 2;
+}
+.intro-text h2 {
+    color: #5b6cff;
+    margin-bottom: 15px;
+}
+.intro-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.intro-text h3 {
+    color: #5b6cff;
+    margin: 20px 0 10px 0;
+}
+.intro-text ul {
+    color: #555;
+    line-height: 1.8;
+}
+.intro-text li {
+    margin-bottom: 8px;
+}
+.intro-image {
+    flex: 1;
+}
+.intro-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.products {
+    margin-bottom: 36px;
+}
+.products h2 {
+    text-align: center;
+    color: #5b6cff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(91,108,255,0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(91,108,255,0.15);
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    color: #5b6cff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.product-desc {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.product-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.product-specs span {
+    color: #888;
+    font-size: 0.85rem;
+}
+.product-price {
+    margin-bottom: 15px;
+}
+.price {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+.contact-btn {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ffa726 100%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+.contact {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(91,108,255,0.10);
+    padding: 40px 32px;
+}
+.contact h2 {
+    text-align: center;
+    color: #5b6cff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+.contact-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 12px;
+}
+.contact-item h3 {
+    color: #5b6cff;
+    margin-bottom: 10px;
+}
+.contact-item p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
 } 
