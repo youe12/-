@@ -110,14 +110,40 @@ if (document.getElementById('dishes')) {
 }
 
 // 首页按钮交互（所有页面都可用）
-window.onload = function() {
-    document.querySelector('.primary-btn')?.addEventListener('click', function() {
-        window.location.href = '/books';  // 去掉 .html 后缀
-    });
-    document.querySelector('.secondary-btn')?.addEventListener('click', function() {
-        alert('素教学习致力于用AI赋能素质教育，敬请期待更多功能！');
-    });
-    document.querySelector('.explore-btn')?.addEventListener('click', function() {
-        window.location.href = '/furniture';  // 跳转到家具商店
-    });
+function initButtons() {
+    const primaryBtn = document.querySelector('.primary-btn');
+    const secondaryBtn = document.querySelector('.secondary-btn');
+    const exploreBtn = document.querySelector('.explore-btn');
+    
+    console.log('按钮初始化:', { primaryBtn, secondaryBtn, exploreBtn });
+    
+    if (primaryBtn) {
+        primaryBtn.addEventListener('click', function() {
+            console.log('点击了开始学习按钮');
+            window.location.href = '/books';
+        });
+    }
+    
+    if (secondaryBtn) {
+        secondaryBtn.addEventListener('click', function() {
+            console.log('点击了了解更多按钮');
+            alert('素教学习致力于用AI赋能素质教育，敬请期待更多功能！');
+        });
+    }
+    
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', function() {
+            console.log('点击了探索世界按钮');
+            window.location.href = '/furniture';
+        });
+    } else {
+        console.log('未找到探索世界按钮');
+    }
+}
+
+// 确保 DOM 加载完成后执行
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initButtons);
+} else {
+    initButtons();
 } 
